@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleView">
+        <attr name="circleRadius" format="dimension" />
+        <attr name="circleColor" format="color" />
+        <attr name="circleDrawOnlystroke" format="boolean" />
+        <attr name="circleStrokeWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomCircleLoader">
+        <attr name="circle_dotsRadius" format="dimension" />
+        <attr name="circle_drawOnlyStroke" format="boolean" />
+        <attr name="circle_strokeWidth" format="dimension" />
+        <attr name="circle_distanceMultiplier" format="integer" />
+        <attr name="circle_firstDotsColor" format="color" />
+        <attr name="circle_secondDotsColor" format="color" />
+        <attr name="circle_thirdDotsColor" format="color" />
+        <attr name="circle_animDuration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="LineTextView">
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="animationDuration" format="integer" />
+    </declare-styleable>
+</resources>

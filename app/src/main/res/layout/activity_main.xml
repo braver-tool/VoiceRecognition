@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="12dp"
+    tools:context="com.speech.call.MainActivity">
+
+    <com.speech.call.loader.CustomCircleLoader
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:circle_animDuration="500"
+        app:circle_distanceMultiplier="3"
+        app:circle_dotsRadius="20dp"
+        app:circle_drawOnlyStroke="true"
+        app:circle_firstDotsColor="@color/g_yellow"
+        app:circle_secondDotsColor="@color/g_red"
+        app:circle_strokeWidth="8dp"
+        app:circle_thirdDotsColor="@color/g_green" />
+
+
+    <ImageButton
+        android:id="@+id/micImageButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_active"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/listenerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/micImageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Start Listening..."
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+</RelativeLayout>
