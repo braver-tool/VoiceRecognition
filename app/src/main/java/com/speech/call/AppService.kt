@@ -1,3 +1,7 @@
+/*
+ * Copyright 2019 ~ https://github.com/braver-tool
+ */
+
 package com.speech.call
 
 import android.annotation.SuppressLint
@@ -11,14 +15,14 @@ import android.os.IBinder
 import android.util.Log
 import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
+import androidx.core.app.ServiceCompat.stopForeground
 import com.tool.speech.GoogleVoiceTypingDisabledException
 import com.tool.speech.Speech
-import com.tool.speech.Speech.stopDueToDelay
 import com.tool.speech.SpeechDelegate
 import com.tool.speech.SpeechRecognitionNotAvailable
 import java.util.*
 
-class AppService : Service(), SpeechDelegate, stopDueToDelay {
+class AppService : Service(), SpeechDelegate {
     private var isFunctionStarted = false
     override fun onBind(intent: Intent): IBinder? {
         // TODO: Return the communication channel to the service.
@@ -28,16 +32,12 @@ class AppService : Service(), SpeechDelegate, stopDueToDelay {
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         if (!isFunctionStarted) {
             isFunctionStarted = true
-            startVoiceRecognizeFunction(true)
+            startVoiceRecognizeFunction()
             setupForegroundService(this)
-            startForeGroundService(this, intent)
         }
         return START_STICKY
     }
 
-    override fun onSpecifiedCommandPronounced(event: String) {
-        startVoiceRecognizeFunction(false)
-    }
 
     override fun onStartOfSpeech() {}
     override fun onSpeechRmsChanged(value: Float) {}
@@ -57,22 +57,10 @@ class AppService : Service(), SpeechDelegate, stopDueToDelay {
     /**
      * Method used to start speech recognize
      */
-    private fun startVoiceRecognizeFunction(isInitiate: Boolean) {
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                (Objects.requireNonNull(getSystemService(AUDIO_SERVICE)) as AudioManager).setStreamMute(AudioManager.STREAM_SYSTEM, true)
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-        if (isInitiate) {
-            delegate = this
-            Speech.getInstance().setListener(this)
-        }
+    private fun startVoiceRecognizeFunction() {
         if (Speech.getInstance().isListening) {
             Speech.getInstance().stopListening()
         } else {
-            System.setProperty("rx.unsafe-disable", "True")
             try {
                 Speech.getInstance().stopTextToSpeech()
                 Speech.getInstance().startListening(null, this)
@@ -94,16 +82,13 @@ class AppService : Service(), SpeechDelegate, stopDueToDelay {
         sendBroadcast(intent)
     }
 
-    private fun startForeGroundService(context: Context, intent: Intent) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            context.startForegroundService(intent)
-        } else {
-            context.startService(intent)
-        }
-    }
 
     private fun setupForegroundService(context: Context) {
         startForeground(NOTIFICATION_ID, getForegroundNotification(context))
+    }
+
+     fun setupStopForegroundService(context: Context) {
+        stopForeground(true)
     }
 
     companion object {
@@ -184,6 +169,7 @@ class AppService : Service(), SpeechDelegate, stopDueToDelay {
             }
             return notificationBuilder.build()
         }
+
 
         /**
          * Method is return the notification icon based on build version

@@ -7,9 +7,9 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.tool.speech.ui.animators.RmsAnimator;
 import com.tool.speech.ui.animators.BarParamsAnimator;
 import com.tool.speech.ui.animators.IdleAnimator;
+import com.tool.speech.ui.animators.RmsAnimator;
 import com.tool.speech.ui.animators.RotatingAnimator;
 import com.tool.speech.ui.animators.TransformAnimator;
 

@@ -1,5 +1,12 @@
 package com.tool.speech;
 
+/**
+ * Android Speech library logger.
+ * You can provide your own logger delegate implementation, to be able to log in a different way.
+ * By default the log level is set to DEBUG when the build type is debug, and OFF in release.
+ * The default logger implementation logs in Android's LogCat.
+ * @author gotev (Aleksandar Gotev)
+ */
 public class Logger {
 
     public enum LogLevel {

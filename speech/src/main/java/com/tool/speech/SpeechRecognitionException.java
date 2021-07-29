@@ -2,6 +2,11 @@ package com.tool.speech;
 
 import android.speech.SpeechRecognizer;
 
+/**
+ * Speech recognition exception.
+ *
+ * @author Aleksandar Gotev
+ */
 public class SpeechRecognitionException extends Exception {
 
     private int code;

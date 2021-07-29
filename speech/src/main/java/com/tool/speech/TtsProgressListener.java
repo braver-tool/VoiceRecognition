@@ -7,6 +7,10 @@ import android.speech.tts.UtteranceProgressListener;
 import java.lang.ref.WeakReference;
 import java.util.Map;
 
+/**
+ * @author Kristiyan Petrov (kristiyan@igenius.net)
+ */
+
 public class TtsProgressListener extends UtteranceProgressListener {
 
     private final Map<String, TextToSpeechCallback> mTtsCallbacks;

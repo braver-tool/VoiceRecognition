@@ -1,19 +1,53 @@
+com/tool/speech/ui/animators/IdleAnimator.java
+ com.tool.speech.ui.animators.IdleAnimator
+com/tool/speech/UnsupportedReason.java
+ com.tool.speech.UnsupportedReason
+com/tool/speech/TextToSpeechCallback.java
+ com.tool.speech.TextToSpeechCallback
+com/tool/speech/engine/DummyOnInitListener.java
+ com.tool.speech.engine.DummyOnInitListener
+com/tool/speech/ui/SpeechProgressView.java
+ com.tool.speech.ui.SpeechProgressView
+ com.tool.speech.ui.SpeechProgressView$1
+com/tool/speech/ui/animators/BarRmsAnimator.java
+ com.tool.speech.ui.animators.BarRmsAnimator
+com/tool/speech/ui/animators/TransformAnimator.java
+ com.tool.speech.ui.animators.TransformAnimator
+ com.tool.speech.ui.animators.TransformAnimator$OnInterpolationFinishedListener
+com/tool/speech/DelayedOperation.java
+ com.tool.speech.DelayedOperation
+ com.tool.speech.DelayedOperation$1
+ com.tool.speech.DelayedOperation$1$1
+ com.tool.speech.DelayedOperation$Operation
+com/tool/speech/engine/BaseTextToSpeechEngine.java
+ com.tool.speech.engine.BaseTextToSpeechEngine
+com/tool/speech/TtsProgressListener.java
+ com.tool.speech.TtsProgressListener
+ com.tool.speech.TtsProgressListener$1
+ com.tool.speech.TtsProgressListener$2
+ com.tool.speech.TtsProgressListener$3
 com/tool/speech/ui/SpeechBar.java
  com.tool.speech.ui.SpeechBar
+com/tool/speech/engine/TextToSpeechEngine.java
+ com.tool.speech.engine.TextToSpeechEngine
+com/tool/speech/SpeechUtil.java
+ com.tool.speech.SpeechUtil
 com/tool/speech/ui/animators/RmsAnimator.java
  com.tool.speech.ui.animators.RmsAnimator
 com/tool/speech/ui/animators/BarParamsAnimator.java
  com.tool.speech.ui.animators.BarParamsAnimator
 com/tool/speech/BuildConfig.java
  com.tool.speech.BuildConfig
+com/tool/speech/engine/SpeechRecognitionEngine.java
+ com.tool.speech.engine.SpeechRecognitionEngine
 com/tool/speech/GoogleVoiceTypingDisabledException.java
  com.tool.speech.GoogleVoiceTypingDisabledException
 com/tool/speech/ui/animators/RotatingAnimator.java
  com.tool.speech.ui.animators.RotatingAnimator
 com/tool/speech/SpeechDelegate.java
  com.tool.speech.SpeechDelegate
-com/tool/speech/TextToSpeechCallback.java
- com.tool.speech.TextToSpeechCallback
+com/tool/speech/SupportedLanguagesListener.java
+ com.tool.speech.SupportedLanguagesListener
 com/tool/speech/SpeechRecognitionNotAvailable.java
  com.tool.speech.SpeechRecognitionNotAvailable
 com/tool/speech/DefaultLoggerDelegate.java
@@ -24,31 +58,11 @@ com/tool/speech/Logger.java
  com.tool.speech.Logger$LogLevel
  com.tool.speech.Logger$LoggerDelegate
  com.tool.speech.Logger$SingletonHolder
-com/tool/speech/ui/SpeechProgressView.java
- com.tool.speech.ui.SpeechProgressView
- com.tool.speech.ui.SpeechProgressView$1
 com/tool/speech/SpeechRecognitionException.java
  com.tool.speech.SpeechRecognitionException
-com/tool/speech/ui/animators/BarRmsAnimator.java
- com.tool.speech.ui.animators.BarRmsAnimator
-com/tool/speech/ui/animators/TransformAnimator.java
- com.tool.speech.ui.animators.TransformAnimator
- com.tool.speech.ui.animators.TransformAnimator$OnInterpolationFinishedListener
+com/tool/speech/engine/BaseSpeechRecognitionEngine.java
+ com.tool.speech.engine.BaseSpeechRecognitionEngine
+ com.tool.speech.engine.BaseSpeechRecognitionEngine$1
 com/tool/speech/Speech.java
  com.tool.speech.Speech
  com.tool.speech.Speech$1
- com.tool.speech.Speech$2
- com.tool.speech.Speech$2$1
- com.tool.speech.Speech$stopDueToDelay
-com/tool/speech/ui/animators/IdleAnimator.java
- com.tool.speech.ui.animators.IdleAnimator
-com/tool/speech/DelayedOperation.java
- com.tool.speech.DelayedOperation
- com.tool.speech.DelayedOperation$1
- com.tool.speech.DelayedOperation$1$1
- com.tool.speech.DelayedOperation$Operation
-com/tool/speech/TtsProgressListener.java
- com.tool.speech.TtsProgressListener
- com.tool.speech.TtsProgressListener$1
- com.tool.speech.TtsProgressListener$2
- com.tool.speech.TtsProgressListener$3

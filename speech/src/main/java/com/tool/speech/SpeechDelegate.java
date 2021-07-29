@@ -2,7 +2,11 @@ package com.tool.speech;
 
 import java.util.List;
 
-
+/**
+ * Speech delegate interface. It contains the methods to receive speech events.
+ *
+ * @author Aleksandar Gotev
+ */
 public interface SpeechDelegate {
 
     /**

@@ -6,7 +6,9 @@ import android.os.Handler;
 import java.util.Timer;
 import java.util.TimerTask;
 
-
+/**
+ * @author Aleksandar Gotev
+ */
 public class DelayedOperation {
 
     private static final String LOG_TAG = DelayedOperation.class.getSimpleName();

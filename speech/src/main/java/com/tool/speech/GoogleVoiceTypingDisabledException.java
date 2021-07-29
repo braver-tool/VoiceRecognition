@@ -1,6 +1,8 @@
 package com.tool.speech;
 
-
+/**
+ * @author Aleksandar Gotev
+ */
 
 public class GoogleVoiceTypingDisabledException extends Exception {
     public GoogleVoiceTypingDisabledException() {

@@ -2,7 +2,11 @@ package com.tool.speech;
 
 import android.util.Log;
 
-
+/**
+ * Default logger delegate implementation which logs in LogCat with {@link Log}.
+ * Log tag is set to <b>UploadService</b> for all the logs.
+ * @author gotev (Aleksandar Gotev)
+ */
 public class DefaultLoggerDelegate implements Logger.LoggerDelegate {
 
     private static final String TAG = Speech.class.getSimpleName();
